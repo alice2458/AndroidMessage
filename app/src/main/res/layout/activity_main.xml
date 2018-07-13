@@ -21,7 +21,6 @@
         android:id="@+id/etNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="phone"
         android:singleLine="true"
         android:textSize="20sp"
         tools:ignore="LabelFor"/>

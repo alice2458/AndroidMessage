@@ -41,8 +41,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else {
                     SmsManager smsManager = SmsManager.getDefault();
                     ArrayList<String> contents = smsManager.divideMessage(content);
-                    for (String str : contents){
-                        smsManager.sendTextMessage(number, null, str, null, null);
+                    String[] num = number.split(",");
+                    for (int n = 0; n < num.length; n++){
+                        for (String str : contents) {
+                            smsManager.sendTextMessage(num[n], null, str, null, null);
+                        }
                     }
                 }
         }
